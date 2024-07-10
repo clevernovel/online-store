@@ -4,7 +4,7 @@
     <title>Online Store</title>
 </head>
 <body>
-<h1>Online Store</h1><hr>
+<h1>Online Store| <a href="/login">Enter</a></h1><hr>
 <h4>Products Worldwide</h4>
 <form action="/" method="get">
 Search by name: <input type="text" name="title"><br>
