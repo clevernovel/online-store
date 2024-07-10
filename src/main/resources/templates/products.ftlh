@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BUYSELL</title>
+    <title>Online Store</title>
 </head>
 <body>
-<h1>BUYSELL</h1><hr>
+<h1>Online Store</h1><hr>
 <h4>Products Worldwide</h4>
 <form action="/" method="get">
 Search by name: <input type="text" name="title"><br>
@@ -25,10 +25,10 @@ Search by name: <input type="text" name="title"><br>
     Price: <input type="number" name="price"/><br><br>
     Country: <input type="text" name="country"/><br><br>
     City: <input type="text" name="city"/><br><br>
-    Seller: <input type="text" name="author"/><br><br>
-    Photo1: <input type="file" name="file1"/><br><br>
-    Photo2: <input type="file" name="file2"/><br><br>
-    Photo3: <input type="file" name="file3"/><br><br>
+    Seller: <input type="text" name="seller"/><br><br>
+    First Photo: <input type="file" name="file1"/><br><br>
+    Second Photo: <input type="file" name="file2"/><br><br>
+    Third Photo: <input type="file" name="file3"/><br><br>
     <input type="submit" value="Add product"/>
 </form>
 </body>

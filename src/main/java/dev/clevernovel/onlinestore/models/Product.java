@@ -5,6 +5,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -26,6 +29,21 @@ public class Product {
     private String country;
     @Column(name = "city")
     private String city;
-    @Column(name = "author")
-    private String author;
+    @Column(name = "seller")
+    private String seller;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
+    private List<Image> images = new ArrayList<>();
+    private Long previewImageId;
+    private LocalDateTime dateOFCreated;
+
+    @PrePersist
+    private void init() {
+        dateOFCreated = LocalDateTime.now();
+    }
+
+    public void addImageToProduct(Image image) {
+        image.setProduct(this);
+        images.add(image);
+    }
 }
