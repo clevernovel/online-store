@@ -29,12 +29,13 @@ public class Product {
     private String country;
     @Column(name = "city")
     private String city;
-    @Column(name = "seller")
-    private String seller;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
     private List<Image> images = new ArrayList<>();
     private Long previewImageId;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
+    @JoinColumn
+    private User user;
     private LocalDateTime dateOFCreated;
 
     @PrePersist
